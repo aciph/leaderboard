@@ -103,7 +103,7 @@ function renderChampionBanner(data) {
   const leaders = data.filter(p => p.points === topScore);
 
   banner.innerHTML = `
-    👑 <strong>🏆 Congratulations to our champion!${leaders.length > 1 ? "s" : ""}</strong><br/>
+    👑 <strong>Current Leader${leaders.length > 1 ? "s" : ""}</strong><br/>
     ${leaders.map(p => `<span>${p.name} • ${p.points} pts</span>`).join("")}
   `;
 }
